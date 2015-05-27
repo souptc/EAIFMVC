@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE6C0B2A-22EF-4ADA-9AB6-EDC5AA213D95}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EAIFMVC</RootNamespace>
+    <AssemblyName>EAIFMVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="EAIFAPI\EAIFAPI.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AlertWrapper.cs" />
+    <Compile Include="Models\CompanyWrapper.cs" />
+    <Compile Include="Models\ContactorWrapper.cs" />
+    <Compile Include="Models\DescriptionAttribute.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\NotificationWrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\EAIFDataServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\960.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\custom.css" />
+    <Content Include="Content\datepicker3.css" />
+    <Content Include="Content\facebox.css" />
+    <Content Include="Content\reset.css" />
+    <Content Include="Content\styles.css" />
+    <Content Include="Content\xenon-components.css" />
+    <Content Include="Content\xenon-core.css" />
+    <Content Include="Content\xenon-forms.css" />
+    <Content Include="Content\xenon-skins.css" />
+    <Content Include="Content\xenon.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\blockquote.gif" />
+    <Content Include="images\button_highlighter.png" />
+    <Content Include="images\cancel.png" />
+    <Content Include="images\closelabel.png" />
+    <Content Include="images\email_delete.png" />
+    <Content Include="images\email_edit.png" />
+    <Content Include="images\h2_trigger_a.gif" />
+    <Content Include="images\header.png" />
+    <Content Include="images\icondock\16x16\basket.png" />
+    <Content Include="images\icondock\16x16\bell.png" />
+    <Content Include="images\icondock\16x16\comment_add.png" />
+    <Content Include="images\icondock\16x16\date_add.png" />
+    <Content Include="images\icondock\16x16\newspaper_add.png" />
+    <Content Include="images\icondock\16x16\support.png" />
+    <Content Include="images\icondock\16x16\wishlist_add.png" />
+    <Content Include="images\icondock\accept.png" />
+    <Content Include="images\icondock\basket.png" />
+    <Content Include="images\icondock\bell.png" />
+    <Content Include="images\icondock\book_addresses.png" />
+    <Content Include="images\icondock\chart_bar.png" />
+    <Content Include="images\icondock\coins.png" />
+    <Content Include="images\icondock\comment.png" />
+    <Content Include="images\icondock\date.png" />
+    <Content Include="images\icondock\email.png" />
+    <Content Include="images\icondock\error.png" />
+    <Content Include="images\icondock\exclamation.png" />
+    <Content Include="images\icondock\information.png" />
+    <Content Include="images\icondock\lightbulb.png" />
+    <Content Include="images\icondock\user.png" />
+    <Content Include="images\jquery.wysiwyg.gif" />
+    <Content Include="images\logo%402x.png" />
+    <Content Include="images\magnifier.png" />
+    <Content Include="images\medal_bronze_1.png" />
+    <Content Include="images\medal_gold_3.png" />
+    <Content Include="images\medal_silver_1.png" />
+    <Content Include="images\shield.png" />
+    <Content Include="images\status_offline.png" />
+    <Content Include="images\status_online.png" />
+    <Content Include="images\thumb1.jpg" />
+    <Content Include="images\thumb1_big.jpg" />
+    <Content Include="images\thumb2.jpg" />
+    <Content Include="images\thumb2_big.jpg" />
+    <Content Include="images\thumb3.jpg" />
+    <Content Include="images\thumb3_big.jpg" />
+    <Content Include="images\thumb4.jpg" />
+    <Content Include="images\thumb4_big.jpg" />
+    <Content Include="images\thumb5.jpg" />
+    <Content Include="images\thumb5_big.jpg" />
+    <Content Include="images\thumb6.jpg" />
+    <Content Include="images\thumb6_big.jpg" />
+    <Content Include="images\thumb7.jpg" />
+    <Content Include="images\thumb7_big.jpg" />
+    <Content Include="images\thumb8.jpg" />
+    <Content Include="images\thumb8_big.jpg" />
+    <Content Include="images\tipsy.gif" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Detail.js" />
+    <Content Include="Scripts\devexpress-web-14.1\.DS_Store" />
+    <Content Include="images\thumb6" />
+    <None Include="Properties\PublishProfiles\TESTSite.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\devexpress-web-14.1\css\dx.android.holo-dark.css" />
+    <Content Include="Scripts\devexpress-web-14.1\css\dx.android.holo-light.css" />
+    <Content Include="Scripts\devexpress-web-14.1\css\dx.common.css" />
+    <Content Include="Scripts\devexpress-web-14.1\css\dx.dark.css" />
+    <Content Include="Scripts\devexpress-web-14.1\css\dx.exporter.dark.css" />
+    <Content Include="Scripts\devexpress-web-14.1\css\dx.exporter.light.css" />
+    <Content Include="Scripts\devexpress-web-14.1\css\dx.ios.default.css" />
+    <Content Include="Scripts\devexpress-web-14.1\css\dx.ios7.default.css" />
+    <Content Include="Scripts\devexpress-web-14.1\css\dx.light.css" />
+    <Content Include="Scripts\devexpress-web-14.1\css\dx.spa.css" />
+    <Content Include="Scripts\devexpress-web-14.1\css\dx.win8.black.css" />
+    <Content Include="Scripts\devexpress-web-14.1\css\dx.win8.white.css" />
+    <Content Include="Scripts\devexpress-web-14.1\index.html" />
+    <Content Include="Scripts\devexpress-web-14.1\js\dx.chartjs.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\dx.chartjs.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\dx.exporter.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\dx.exporter.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\dx.webappjs.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\dx.webappjs.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\globalize.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\globalize.min.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\jquery-1.11.1.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\jquery-2.1.1.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\knockout-3.1.0.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\knockout-3.1.0.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\localization\dx.webappjs.de.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\localization\dx.webappjs.fr.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\localization\dx.webappjs.ja.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\localization\dx.webappjs.ru.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-core.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-core.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-framework.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-framework.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-viz-charts.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-viz-charts.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-viz-core.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-viz-core.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-viz-gauges.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-viz-gauges.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-viz-rangeselector.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-viz-rangeselector.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-viz-sparklines.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-viz-sparklines.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-viz-vectormap.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-viz-vectormap.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-widgets-base.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-widgets-base.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-widgets-web.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\modules\dx.module-widgets-web.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\vectormap-data\africa.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\vectormap-data\canada.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\vectormap-data\eurasia.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\vectormap-data\europe.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\vectormap-data\usa.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\vectormap-data\world.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\vectormap-utils\dx.vectormaputils.debug.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\vectormap-utils\dx.vectormaputils.js" />
+    <Content Include="Scripts\devexpress-web-14.1\js\vectormap-utils\dx.vectormaputils.node.js" />
+    <Content Include="Scripts\devexpress-web-14.1\layouts\Desktop\DesktopLayout.css" />
+    <Content Include="Scripts\devexpress-web-14.1\layouts\Desktop\DesktopLayout.html" />
+    <Content Include="Scripts\devexpress-web-14.1\layouts\Desktop\DesktopLayout.js" />
+    <Content Include="Scripts\devexpress-web-14.1\layouts\Empty\EmptyLayout.css" />
+    <Content Include="Scripts\devexpress-web-14.1\layouts\Empty\EmptyLayout.html" />
+    <Content Include="Scripts\devexpress-web-14.1\layouts\Empty\EmptyLayout.js" />
+    <Content Include="Scripts\devexpress-web-14.1\ts\dx.all.d.ts" />
+    <Content Include="Scripts\devexpress-web-14.1\ts\dx.chartjs.d.ts" />
+    <Content Include="Scripts\devexpress-web-14.1\ts\dx.webappjs.d.ts" />
+    <Content Include="Scripts\devexpress-web-14.1\ts\globalize.d.ts" />
+    <Content Include="Scripts\devexpress-web-14.1\ts\jquery.d.ts" />
+    <Content Include="Scripts\excanvas.pack.js" />
+    <Content Include="Scripts\facebox.js" />
+    <Content Include="Scripts\graphs.js" />
+    <Content Include="Scripts\joinable.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\jquery.flot.pack.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.tipsy.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Notifications.js" />
+    <Content Include="Scripts\pngfix.js" />
+    <Content Include="Scripts\resizeable.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\scripts.js" />
+    <Content Include="Scripts\toastr\index.html" />
+    <Content Include="Scripts\toastr\toastr-icon.png" />
+    <Content Include="Scripts\toastr\toastr.css" />
+    <Content Include="Scripts\toastr\toastr.js" />
+    <Content Include="Scripts\toastr\toastr.min.css" />
+    <Content Include="Scripts\toastr\toastr.min.js" />
+    <Content Include="Scripts\TweenMax.min.js" />
+    <Content Include="Scripts\xenon-api.js" />
+    <Content Include="Scripts\xenon-custom.js" />
+    <Content Include="Scripts\xenon-notes.js" />
+    <Content Include="Scripts\xenon-toggles.js" />
+    <Content Include="Scripts\xenon-widgets.js" />
+    <Content Include="Scripts\_references.js" />
+    <None Include="Service References\EAIFDataServiceReference\EAIFDataService.disco" />
+    <None Include="Service References\EAIFDataServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\EAIFDataServiceReference\configuration.svcinfo" />
+    <Content Include="Service References\EAIFDataServiceReference\EAIFMVC.EAIFDataServiceReference.Alert.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EAIFDataServiceReference\EAIFMVC.EAIFDataServiceReference.Company.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EAIFDataServiceReference\EAIFMVC.EAIFDataServiceReference.Contactor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EAIFDataServiceReference\EAIFMVC.EAIFDataServiceReference.LoadAlertListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EAIFDataServiceReference\EAIFMVC.EAIFDataServiceReference.LoadAlertResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EAIFDataServiceReference\EAIFMVC.EAIFDataServiceReference.LoadCompanyListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EAIFDataServiceReference\EAIFMVC.EAIFDataServiceReference.LoadCompanyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EAIFDataServiceReference\EAIFMVC.EAIFDataServiceReference.LoadContactorListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EAIFDataServiceReference\EAIFMVC.EAIFDataServiceReference.LoadNotificationListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EAIFDataServiceReference\EAIFMVC.EAIFDataServiceReference.Notification.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\EAIFDataServiceReference\EAIFMVC.EAIFDataServiceReference.SearchAlertsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\EAIFDataServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="vedio\mov_bbb.mp4" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Scripts\toastr\.DS_Store" />
+    <Content Include="Scripts\toastr\toastr.less" />
+    <Content Include="Scripts\toastr\toastr.min.js.map" />
+    <Content Include="Scripts\toastr\toastr.scss" />
+    <Content Include="Views\Home\Detail.cshtml" />
+    <Content Include="Views\Home\Reports.cshtml" />
+    <Content Include="Views\Home\_Report1.cshtml" />
+    <Content Include="Views\Home\_Report2.cshtml" />
+    <Content Include="Views\Home\Message.cshtml" />
+    <Content Include="Views\Home\Notifications.cshtml" />
+    <Content Include="Views\Home\AlertList.cshtml" />
+    <Content Include="Views\Home\Users.cshtml" />
+    <Content Include="Views\Home\AlertHistory.cshtml" />
+    <None Include="Service References\EAIFDataServiceReference\EAIFDataService.wsdl" />
+    <None Include="Service References\EAIFDataServiceReference\EAIFDataService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAIFDataServiceReference\EAIFDataService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EAIFDataServiceReference\EAIFDataService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Views\Home\Report2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="images\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\EAIFDataServiceReference\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51482</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51482/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

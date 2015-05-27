@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "EAIF报警处理";
+}
+<!-- LOAD TIPSY TOOLTIPS-->
+<script type="text/javascript" src="~/Scripts/jquery.tipsy.js"></script>
+
+<!-- LOAD CUSTOM JQUERY SCRIPTS-->
+<script type="text/javascript" src="~/Scripts/scripts.js"></script>
+
+<!-- LOAD FACEBOX -->
+<script type="text/javascript" src="~/Scripts/facebox.js"></script>
+
+<!-- EVERYTING BELOW IS THE MAIN CONTENT -->
+<div id="main_content_wrap" class="container_12">
+    <div data-bind="with: alertViewModel">
+        <div class="notification failure canhide">
+            <ul>
+                <li>
+                    <strong>报警号: <span data-bind="text: ID"></span></strong>
+                </li>
+                
+                <li>
+                    <strong>日期： <span data-bind="text: alertTime"></span></strong>
+                </li>
+            </ul>
+        </div>
+        <div class="clearfix">&nbsp;</div>
+        <div id="left_panal" class="grid_8">
+            <h2>报警信息</h2>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th width="30%" scope="col"></th>
+                    <th width="60%" scope="col"></th>
+                </tr>
+                <tr>
+                    <td scope="col">企业名</td>
+                    <td scope="col" data-bind="text: companyName"></td>
+                </tr>
+                <tr>
+                    <td scope="col">报警时间</td>
+                    <td scope="col" data-bind="text: alertTime"></td>
+                </tr>
+                <tr>
+                    <td scope="col">事故级别</td>
+                    <td scope="col" data-bind="text: dangerSource"></td>
+                </tr>
+                <tr>
+                    <td scope="col">报警状态</td>
+                    <td scope="col" data-bind="text: statusDesc, css: statusStyle"></td>
+                </tr>
+                <tr>
+                    <td scope="col">事故原因</td>
+                    <td scope="col" data-bind="text: $root.alertViewModel.reasonViewModel.Text"></td>
+                </tr>
+                <tr>
+                    <td scope="col">紧急联系电话</td>
+                    <td scope="col" data-bind="text: phone"></td>
+                </tr>
+            </table>
+
+            <div id="reasonEdit" class="formArea" data-bind="popHanlde: editingReason">
+                <p>
+                    <label>事故原因</label><br />
+                </p>
+                <p>
+                    <label>编辑内容:</label><br />
+                    <textarea cols="8" rows="5" data-bind="value: EditText"></textarea>
+                </p>
+                <p>
+                    <input type="submit" class="submit" value="保存" data-bind="click:$parent.saveReason" />
+                    <input type="submit" class="submit" value="取消" data-bind="click:$parent.cancelReason" />
+                </p>
+            </div>
+
+            <div class="buttons">
+                <div class ="formArea">
+                    <p>
+                        <input type="submit" class="submit" value="短信通知" onclick=" jQuery.facebox({ ajax: '@Url.Action("Message", "Home", new {alertId = "8CE91B30-DB54-4FAA-B77F-E70BDCA1E15D"})' }) "/>
+                        <input type="submit" class="submit" value="填写事故原因" data-bind="click:editReason" />
+                        <input type="submit" class="submit" value="误报" data-bind="disable: status() != 0, click:MistakeOp" />
+                    </p>
+                </div>
+            </div>
+
+      </div>
+        </div>
+        <div id="right panal" class="grid_4">
+            <h3>企业AAA</h3>
+            <div id="company">
+                <img src="~/images/thumb1.jpg" width="100" height="100" alt="Image1" />
+                <ul>
+                    <li>化工制造业</li>
+                    <li>地址：苏州市工业园区XX路XXX号</li>
+                    <li>公司成立于XXX年，拥有厂房XXXX件</li>
+                    <li>占地XXX亩， 产值XXXXX亿元</li>
+                </ul>
+            </div>
+            <h3>监控视频</h3>
+            <div class="vedio">
+                <video controls=controls>
+                    <source src="~/vedio/mov_bbb.mp4" type="video/mp4" />
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+        </div>
+    </div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        var jsonAlertData = JSON.parse(@Html.Raw(EAIFMVC.EAIFAPI.EAIFAPI.JsonEncode(ViewBag.alertJson)));
+        var jsonCompanyDate = JSON.parse(@Html.Raw(EAIFMVC.EAIFAPI.EAIFAPI.JsonEncode(ViewBag.companyJson)));
+    
+    </script>
+    <script src="~/Scripts/Detail.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+        });
+    </script>
+}

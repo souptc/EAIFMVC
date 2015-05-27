@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Notifications</title>
+</head>
+<body>
+<div id="main_content_wrap" class="container_12">
+    <div class="sidebar-menu toggle-others fixed">
+        <div class="sidebar-menu-inner">
+        </div>
+        <ul id="main-menu" class="main-menu">
+            <li class="active">
+                <a href="/EAIF/views/Reports.html">
+                    <span class="title">数据总览</span>
+                </a>
+            </li>
+            <li>
+                <a href="/EAIF/views/Report2.html">
+                    <span class="title">企业单家报表</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>
+@section scripts
+{
+    <script type="text/javascript">
+        var jsonListData = JSON.parse(@Html.Raw(EAIFMVC.EAIFAPI.EAIFAPI.JsonEncode(ViewBag.listJson)));
+
+    </script>
+    <script src="~/Scripts/Notifications.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+        });
+    </script>
+}

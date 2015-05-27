@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="07a08890-2bc6-4a7a-8346-1b408d9655d2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://120.25.240.193:8078/EAIFDataService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EAIFDataService.wsdl" MetadataType="Wsdl" ID="0438950f-87cb-4b1a-bfb8-dbaefdb1dc9a" SourceId="1" SourceUrl="http://120.25.240.193:8078/EAIFDataService?wsdl" />
+    <MetadataFile FileName="EAIFDataService.xsd" MetadataType="Schema" ID="16e29189-03bf-45d5-9f2e-33e9f29f8fd0" SourceId="1" SourceUrl="http://120.25.240.193:8078/EAIFDataService?xsd=xsd2" />
+    <MetadataFile FileName="EAIFDataService.disco" MetadataType="Disco" ID="5d49d862-35f1-463a-904f-35bcb612aec5" SourceId="1" SourceUrl="http://120.25.240.193:8078/EAIFDataService?disco" />
+    <MetadataFile FileName="EAIFDataService1.xsd" MetadataType="Schema" ID="67314b01-4e20-4c68-8b84-ec915a56a873" SourceId="1" SourceUrl="http://120.25.240.193:8078/EAIFDataService?xsd=xsd1" />
+    <MetadataFile FileName="EAIFDataService2.xsd" MetadataType="Schema" ID="fec27c11-fba3-490b-b936-d2650ed25a29" SourceId="1" SourceUrl="http://120.25.240.193:8078/EAIFDataService?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

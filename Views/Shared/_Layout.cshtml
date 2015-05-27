@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>
+
+
+    <!-- MASTER STYLESHEET-->
+    @Styles.Render("~/Content/styles.css")
+    @Styles.Render("~/Content/facebox.css")
+    
+</head>
+<body>
+    <div id="header" class="png_bg">
+
+        <div id="head_wrap" class="container_12">
+
+            <!-- start of logo - you could replace this with an image of your logo -->
+            <div id="logo" class="grid_4">
+                <h1>EAIF<span>化工企业生产报警信息综合平台</span></h1>
+            </div>
+            <!-- end logo -->
+            <!-- start control panel -->
+            <div id="controlpanel" class="grid_8">
+
+                <ul>
+
+                    <li><p><strong>你好，系统管理员</strong></p></li>
+                    <li><a href="#" class="first">设置</a></li>
+                    <li><a href="#" class="last">退出登录</a></li>
+
+                </ul>
+
+            </div>
+            <!-- end control panel -->
+            <!-- start navigation -->
+            <div id="navigation" class=" grid_12">
+
+                <ul>
+
+                    <li><a href="@Url.Action("Index", "Home")">主页</a></li>
+                    <li><a href="@Url.Action("Detail", "Home", new { alertId = new Guid("8CE91B30-DB54-4FAA-B77F-E70BDCA1E15D") })">实时报警处理</a></li>
+                    <li><a href="@Url.Action("Reports", "Home")">监控数据报表</a></li>
+                    <li><a href="@Url.Action("AlertHistory", "Home")">历史数据查询</a></li>
+                    <li><a href="@Url.Action("Users", "Home")">用户管理</a></li>
+
+
+                </ul>
+
+            </div>
+            <!-- end navigation -->
+
+        </div><!-- end headwarp  -->
+</div><!-- end header -->
+<div class="body clearfix">
+    @RenderBody()
+</div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
